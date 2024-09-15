@@ -4,6 +4,8 @@ import { Data } from "./Data";
 import { runConnectToTheWebSocketServer } from "./runConnectToTheWebSocketServer";
 import { runCreateUsernameForm } from "./runCreateUsernameForm";
 import { whenUsernameSubmitted } from "./whenUsernameSubmitted";
+import { runCreateChatElement } from "./runCreateChatElement";
+import { whenChatMessageSubmitted } from "./whenChatMessageSubmitted";
 
 function main(): void {
 	const data: Data = {
@@ -12,6 +14,9 @@ function main(): void {
 			whenUsernameSubmitted(username, data);
 		}),
 		user: undefined,
+		chatElement: runCreateChatElement((message: string) => {
+			whenChatMessageSubmitted(message, data);
+		}),
 	};
 
 	whenAppStart(data);

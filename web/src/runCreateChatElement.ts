@@ -4,23 +4,29 @@ import { runFindFormInElement } from "./runFindFormInElement";
 export function runCreateChatElement(
 	onSubmit: (message: string) => void,
 ): Element {
-	const textHeight = "60px";
+	const textHeight = "85px";
+	const separatorHeight = "1px";
+	const gap = "1rem";
 
 	const chat = runCreateElement(`
 		<div style="position: fixed; top: 0; right: 0; bottom: 0; left: 0;">
-			<div style="margin: auto; display: flex; flex-direction: column; align-items: stretch; width: 600px; max-width: calc(100% - 2rem); height: 100%;">
-				<div style="height: calc(100% - ${textHeight});">
-					<div data-key="chat-message-list" style="height: 100%; overflow-y: scroll;"></div>
+			<div style="margin: auto; display: flex; flex-direction: column; align-items: stretch; gap: ${gap}; width: 600px; max-width: calc(100% - 2rem); height: 100vh;">
+				<div style="box-sizing: border-box; height: calc(100% - ${textHeight} - ${separatorHeight} - 3 * ${gap});">
+					<div class="border-separation" data-key="chat-message-list" style="height: 100%; overflow-y: scroll;"></div>
 				</div>
 
-				<div style="display: flex; align-items: center; height: ${textHeight};">
-					<form>
-						<div>
-							<textarea name="message"></textarea>
-						</div>
+				<div style="border-bottom: 1px solid darkgray;"></div>
 
-						<div>
-							<button>Send</button>
+				<div style="box-sizing: border-box; display: flex; align-items: stretch; height: ${textHeight};">
+					<form style="width: 100%;">
+						<div style="display: flex; flex-direction: column; gap: 1rem;">
+							<div>
+								<textarea name="message" style="box-sizing: border-box; display: block; width: 100%;"></textarea>
+							</div>
+
+							<div style="display: flex; justify-content: right;">
+								<button>Send</button>
+							</div>
 						</div>
 					</form>
 				</div>

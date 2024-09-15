@@ -1,8 +1,11 @@
 import { runCreateElement } from "./runCreateElement";
 
-export function runCreateMessageElement(username: string, message: string): Element {
-    return runCreateElement(`
-		<div>
+export function runCreateMessageElement(
+	username: string,
+	message: string,
+): Element {
+	return runCreateElement(`
+		<div style="padding: 1rem 0.75rem;">
 			<div>
 				<b>${username}:</b>
 			</div>

@@ -11,6 +11,7 @@ function main(): void {
 		usernameForm: runCreateUsernameForm((username: string) => {
 			whenUsernameSubmitted(username, data);
 		}),
+		user: undefined,
 	};
 
 	whenAppStart(data);

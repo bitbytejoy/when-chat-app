@@ -5,7 +5,7 @@ import { User } from "./User";
 export function runUserIdAndUsernameAreValid(
 	users: Map<string, User>,
 	userId: string,
-	username: string,
+	username: string
 ): boolean {
 	return (
 		runDoesUserExist(users, userId) &&

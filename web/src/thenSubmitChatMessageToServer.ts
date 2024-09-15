@@ -7,7 +7,7 @@ export function thenSubmitChatMessageToServer(message: string, data: Data) {
 			data.socket,
 			data.user.id,
 			data.user.username,
-			message,
+			message
 		);
 	}
 }

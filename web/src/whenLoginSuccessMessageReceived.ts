@@ -6,7 +6,7 @@ import { thenSaveUserIdAndUsernameToLocalStorage } from "./thenSaveUserIdAndUser
 export function whenLoginSuccessMessageReceived(
 	userId: string,
 	username: string,
-	data: Data,
+	data: Data
 ) {
 	thenSaveUserIdAndUsernameToLocalStorage(userId, username, data);
 	thenSaveUserIdAndUsernameToData(userId, username, data);

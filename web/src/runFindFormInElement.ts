@@ -1,9 +1,9 @@
 export function runFindFormInElement(element: Element): HTMLFormElement {
-    const form = element.querySelector("form");
+	const form = element.querySelector("form");
 
-    if (form instanceof HTMLFormElement) {
-        return form;
-    }
+	if (form instanceof HTMLFormElement) {
+		return form;
+	}
 
-    throw new Error("UsernameForm does not contain a <form>");
+	throw new Error("UsernameForm does not contain a <form>");
 }

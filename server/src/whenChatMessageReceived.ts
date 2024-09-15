@@ -7,7 +7,7 @@ export function whenChatMessageReceived(
 	userId: string,
 	username: string,
 	message: string,
-	data: Data,
+	data: Data
 ): void {
 	thenBroadcastMessageToAllUsers(socket, userId, username, message, data);
 }

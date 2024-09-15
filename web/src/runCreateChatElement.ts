@@ -2,7 +2,7 @@ import { runCreateElement } from "./runCreateElement";
 import { runFindFormInElement } from "./runFindFormInElement";
 
 export function runCreateChatElement(
-	onSubmit: (message: string) => void,
+	onSubmit: (message: string) => void
 ): Element {
 	const textHeight = "85px";
 	const separatorHeight = "1px";
@@ -49,7 +49,7 @@ export function runCreateChatElement(
 }
 
 function runFindMessageTextareaInChatElement(
-	chat: Element,
+	chat: Element
 ): HTMLTextAreaElement {
 	const message = chat.querySelector('[name="message"]');
 

@@ -9,7 +9,7 @@ export function thenBroadcastMessageToAllUsers(
 	userId: string,
 	username: string,
 	message: string,
-	data: Data,
+	data: Data
 ) {
 	if (runUserIdAndUsernameAreValid(data.users, userId, username)) {
 		runBroadcastChatMessage(data.io, username, message);

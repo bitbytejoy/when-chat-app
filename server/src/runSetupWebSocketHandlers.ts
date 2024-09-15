@@ -8,8 +8,8 @@ export function runSetupWebSocketHandlers(
 		socket: Socket,
 		userId: string,
 		username: string,
-		message: string,
-	) => void,
+		message: string
+	) => void
 ): void {
 	io.on("connection", (socket) => {
 		onUserConnects(socket);
@@ -22,7 +22,7 @@ export function runSetupWebSocketHandlers(
 			"message",
 			(userId: string, username: string, message: string) => {
 				onChatMessageReceived(socket, userId, username, message);
-			},
+			}
 		);
 	});
 }

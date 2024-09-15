@@ -4,7 +4,7 @@ import { thenAppendChatMessageToMessageList } from "./thenAppendChatMessageToMes
 export function whenChatMessageReceived(
 	username: string,
 	message: string,
-	data: Data,
+	data: Data
 ) {
 	thenAppendChatMessageToMessageList(username, message, data);
 }

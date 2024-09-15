@@ -2,7 +2,7 @@ import { runCreateElement } from "./runCreateElement";
 
 export function runCreateMessageElement(
 	username: string,
-	message: string,
+	message: string
 ): Element {
 	return runCreateElement(`
 		<div style="padding: 1rem 0.75rem;">

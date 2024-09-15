@@ -1,7 +1,7 @@
 import { runFindFormInElement } from "./runFindFormInElement";
 
 export function runFindFormInUsernameForm(
-	usernameForm: Element,
+	usernameForm: Element
 ): HTMLFormElement {
 	return runFindFormInElement(usernameForm);
 }

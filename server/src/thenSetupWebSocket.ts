@@ -15,6 +15,6 @@ export function thenSetupWebSocket(data: Data) {
 		},
 		(socket: Socket, userId: string, username: string, message: string) => {
 			whenChatMessageReceived(socket, userId, username, message, data);
-		},
+		}
 	);
 }

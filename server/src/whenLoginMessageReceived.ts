@@ -5,7 +5,7 @@ import { thenLoginUser } from "./thenLoginUser";
 export function whenLoginMessageReceived(
 	socket: Socket,
 	username: string,
-	data: Data,
+	data: Data
 ) {
 	thenLoginUser(socket, username, data);
 }
